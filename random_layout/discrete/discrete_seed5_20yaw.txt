@@ -1,0 +1,73 @@
+random_seed = 5
+yaw_angle = 20.0
+
+nturbs = 10
+percent_increase = 3.4556522800816656
+start_aep = 867962494390.4023
+opt_aep = 897956260118.058
+time = 0.1999971866607666
+funcs = 7
+
+nturbs = 20
+percent_increase = 1.9542253445344369
+start_aep = 1610628047067.2388
+opt_aep = 1642103348569.2068
+time = 0.8340861797332764
+funcs = 15
+
+nturbs = 30
+percent_increase = 1.9869418334764053
+start_aep = 2483911248914.252
+opt_aep = 2533265120625.3555
+time = 2.2478110790252686
+funcs = 23
+
+nturbs = 40
+percent_increase = 2.2629417561273497
+start_aep = 3219167142529.9683
+opt_aep = 3292015019997.8105
+time = 4.322016000747681
+funcs = 32
+
+nturbs = 50
+percent_increase = 4.467244231799429
+start_aep = 3877493581263.7163
+opt_aep = 4050710689611.113
+time = 7.206860780715942
+funcs = 42
+
+nturbs = 60
+percent_increase = 4.317043283529625
+start_aep = 4556244300425.35
+opt_aep = 4752939338978.063
+time = 10.019933938980103
+funcs = 50
+
+nturbs = 70
+percent_increase = 6.442690353539324
+start_aep = 5213839799698.995
+opt_aep = 5549751353523.196
+time = 14.726469039916992
+funcs = 61
+
+nturbs = 80
+percent_increase = 4.497319910042799
+start_aep = 6058488905807.64
+opt_aep = 6330958533616.261
+time = 19.60202407836914
+funcs = 68
+
+nturbs = 90
+percent_increase = 2.9884517359117777
+start_aep = 7042064942536.364
+opt_aep = 7252513654555.627
+time = 26.366297006607056
+funcs = 78
+
+nturbs = 100
+percent_increase = 3.5369774389295623
+start_aep = 7791094162006.212
+opt_aep = 8066663404762.13
+time = 33.23607110977173
+funcs = 87
+

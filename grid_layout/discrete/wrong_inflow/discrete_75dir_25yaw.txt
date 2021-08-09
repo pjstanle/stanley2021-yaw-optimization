@@ -1,0 +1,56 @@
+nrows = 3
+percent_increase = 0.0
+start_aep = 980608485954.3885
+opt_aep = 980608485954.3885
+time = 0.16474699974060059
+funcs = 6
+
+nrows = 4
+percent_increase = 0.0
+start_aep = 1703123667939.6475
+opt_aep = 1703123667939.6475
+time = 0.5207209587097168
+funcs = 12
+
+nrows = 5
+percent_increase = 0.0
+start_aep = 2568157952561.074
+opt_aep = 2568157952561.074
+time = 1.4198782444000244
+funcs = 20
+
+nrows = 6
+percent_increase = 0.0
+start_aep = 3601962236323.362
+opt_aep = 3601962236323.362
+time = 3.1702451705932617
+funcs = 30
+
+nrows = 7
+percent_increase = 0.0
+start_aep = 4802857388992.23
+opt_aep = 4802857388992.23
+time = 6.3831706047058105
+funcs = 42
+
+nrows = 8
+percent_increase = 0.06445847589307795
+start_aep = 6162810940663.322
+opt_aep = 6166783394667.846
+time = 11.91140103340149
+funcs = 56
+
+nrows = 9
+percent_increase = 0.18455148928402054
+start_aep = 7682381871024.295
+opt_aep = 7696559821179.756
+time = 20.680115222930908
+funcs = 72
+
+nrows = 10
+percent_increase = 0.31701099497959684
+start_aep = 9364699634624.633
+opt_aep = 9394386762113.207
+time = 34.02279305458069
+funcs = 90
+

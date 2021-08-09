@@ -1,0 +1,35 @@
+nturbs = 10
+percent_increase = 56.37580230578008
+start_aep = 413209324451.75543
+opt_aep = 646159396313.7264
+time = 0.250946044921875
+funcs = 9
+
+nturbs = 20
+percent_increase = 71.45122688261652
+start_aep = 777886863770.1711
+opt_aep = 1333696571692.6663
+time = 1.081507682800293
+funcs = 19
+
+nturbs = 30
+percent_increase = 78.35201566833281
+start_aep = 1147250195181.3657
+opt_aep = 2046143847864.8481
+time = 2.6026298999786377
+funcs = 29
+
+nturbs = 40
+percent_increase = 82.37613326924404
+start_aep = 1520132391545.7292
+opt_aep = 2772358676274.3857
+time = 4.982922077178955
+funcs = 39
+
+nturbs = 50
+percent_increase = 84.93192141179064
+start_aep = 1895890371477.817
+opt_aep = 3506106491835.062
+time = 8.07693099975586
+funcs = 49
+
