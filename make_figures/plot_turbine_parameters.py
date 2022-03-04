@@ -290,6 +290,19 @@ ax2.set_ylabel("power coefficient",fontsize=8)
 ax3.set_ylabel("thrust coefficient",fontsize=8)
 
 
+dy = 0.02
+dx = 0.05
+limx = ax.get_xlim()
+limy = ax.get_ylim()
+ax.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"a",fontsize=10,weight="bold")
+limx = ax2.get_xlim()
+limy = ax2.get_ylim()
+ax2.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"b",fontsize=10,weight="bold")
+limx = ax3.get_xlim()
+limy = ax3.get_ylim()
+ax3.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"c",fontsize=10,weight="bold")
+
+
 plt.subplots_adjust(bottom=0.2,left=0.06,right=0.99,top=0.9,wspace=0.5)
 
 plt.savefig("figures/turbine_parameters.pdf",transparent=True)

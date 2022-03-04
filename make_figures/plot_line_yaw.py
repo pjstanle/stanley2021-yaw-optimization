@@ -138,10 +138,10 @@ ax1.set_title("3 D spacing",fontsize=8)
 ax2.set_title("5 D spacing",fontsize=8)
 ax3.set_title("8 D spacing",fontsize=8)
 
-plt.suptitle("in-line Boolean yaw angles",fontsize=8)
+plt.suptitle("In-line Boolean yaw angles",fontsize=8)
 plt.subplots_adjust(top=0.84,left=0.12,right=0.85,bottom=0.15)
 
-plt.savefig("figures/line_yaw_angle_3.pdf",transparent=True)
+# plt.savefig("figures/line_yaw_angle_3.pdf",transparent=True)
 
 plt.show()
 

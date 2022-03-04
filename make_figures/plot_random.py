@@ -61,8 +61,8 @@ opt_continuous = np.zeros(ind)
 
 for k in range(nseeds):
     random_seed = k
-    nturbs,percent_increase,start_aep,opt_aep,time,funcs = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/random_layout/discrete/discrete_seed%s_20yaw.txt"%random_seed)
-    nturbs_c,percent_increase_c,start_aep_c,opt_aep_c,time_c,funcs_c = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/random_layout/continuous/continuous_seed%s_.txt"%random_seed)
+    nturbs,percent_increase,start_aep,opt_aep,time,funcs = read_layout_file("../random_layout/discrete/discrete_seed%s_20yaw.txt"%random_seed)
+    nturbs_c,percent_increase_c,start_aep_c,opt_aep_c,time_c,funcs_c = read_layout_file("../random_layout/continuous/continuous_seed%s_.txt"%random_seed)
     percent_discrete += percent_increase
     time_discrete += time
     funcs_discrete += funcs
@@ -137,7 +137,24 @@ ax3.set_xticklabels(("","20","","40","","60","","80","","100"))
 ax4.set_xticks((10,20,30,40,50,60,70,80,90,100))
 ax4.set_xticklabels(("","20","","40","","60","","80","","100"))
 
-plt.suptitle(r"averaged random layout: $\bf{varied}$ $\bf{turbine}$ $\bf{number}$",fontsize=8)
+
+
+dy = 0.05
+dx = 0.05
+limx = ax1.get_xlim()
+limy = ax1.get_ylim()
+ax1.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"a",fontsize=10,weight="bold")
+limx = ax2.get_xlim()
+limy = ax2.get_ylim()
+ax2.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"b",fontsize=10,weight="bold")
+limx = ax3.get_xlim()
+limy = ax3.get_ylim()
+ax3.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"c",fontsize=10,weight="bold")
+limx = ax4.get_xlim()
+limy = ax4.get_ylim()
+ax4.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"d",fontsize=10,weight="bold")
+
+plt.suptitle(r"Averaged random layout: $\bf{varied}$ $\bf{turbine}$ $\bf{number}$",fontsize=8)
 plt.subplots_adjust(top=0.93,left=0.13,right=0.99,bottom=0.1,
             wspace=0.5,hspace=0.2)
 

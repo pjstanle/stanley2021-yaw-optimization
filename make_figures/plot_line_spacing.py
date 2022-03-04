@@ -60,8 +60,8 @@ ac = np.zeros((len(spacing),5))
 
 
 for i in range(len(spacing)):
-    nturbs,percent_discrete,start_aep,opt_discrete,time_discrete,funcs_discrete = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/line_layout/discrete/discrete_%sspacing_20yaw.txt"%spacing[i])
-    nturbs_c,percent_continuous,start_aep_c,opt_continuous,time_continuous,funcs_continuous = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/line_layout/continuous/continuous_%sspacing.txt"%spacing[i])
+    nturbs,percent_discrete,start_aep,opt_discrete,time_discrete,funcs_discrete = read_layout_file("../line_layout/discrete/discrete_%sspacing_20yaw.txt"%spacing[i])
+    nturbs_c,percent_continuous,start_aep_c,opt_continuous,time_continuous,funcs_continuous = read_layout_file("../line_layout/continuous/continuous_%sspacing.txt"%spacing[i])
 
     pd[i,:] = percent_discrete[:]
     pc[i,:] = percent_continuous[:]
@@ -123,6 +123,22 @@ ax1.set_xticks((3,4,5,6,7,8))
 ax2.set_xticks((3,4,5,6,7,8))
 ax3.set_xticks((3,4,5,6,7,8))
 ax4.set_xticks((3,4,5,6,7,8))
+
+dy = 0.02
+dx = 0.08
+limx = ax1.get_xlim()
+limy = ax1.get_ylim()
+ax1.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"a",fontsize=10,weight="bold")
+limx = ax2.get_xlim()
+limy = ax2.get_ylim()
+ax2.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"b",fontsize=10,weight="bold")
+limx = ax3.get_xlim()
+limy = ax3.get_ylim()
+ax3.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"c",fontsize=10,weight="bold")
+limx = ax4.get_xlim()
+limy = ax4.get_ylim()
+ax4.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"d",fontsize=10,weight="bold")
+
 
 plt.savefig("figures/line_results_spacing.pdf",transparent=True)
 

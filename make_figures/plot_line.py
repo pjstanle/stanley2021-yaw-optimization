@@ -45,8 +45,8 @@ def read_layout_file(filename,TURBS=True):
         return nrows,percent_increase,start_aep,opt_aep,time,funcs
 
 
-nturbs,percent_discrete,start_aep,opt_discrete,time_discrete,funcs_discrete = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/line_layout/discrete/discrete_5spacing_20yaw.txt")
-nturbs_c,percent_continuous,start_aep_c,opt_continuous,time_continuous,funcs_continuous = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/line_layout/continuous/continuous_5spacing.txt")
+nturbs,percent_discrete,start_aep,opt_discrete,time_discrete,funcs_discrete = read_layout_file("../line_layout/discrete/discrete_5spacing_20yaw.txt")
+nturbs_c,percent_continuous,start_aep_c,opt_continuous,time_continuous,funcs_continuous = read_layout_file("../line_layout/continuous/continuous_5spacing.txt")
 
 
 
@@ -94,7 +94,7 @@ ax4.plot(nturbs,time_continuous/time_discrete,"o",color="C3")
 ax4.set_ylabel("time continuous/\ntime Boolean",fontsize=8)
 ax4.set_xlabel("number of turbines",fontsize=8)
 
-plt.suptitle(r"turbines in-line: $\bf{varied}$ $\bf{turbine}$ $\bf{number}$",fontsize=8)
+plt.suptitle(r"Turbines in-line: $\bf{varied}$ $\bf{turbine}$ $\bf{number}$",fontsize=8)
 plt.subplots_adjust(top=0.93,left=0.13,right=0.99,bottom=0.1,
             wspace=0.5,hspace=0.2)
 
@@ -102,6 +102,23 @@ ax1.set_xticks((10,20,30,40,50))
 ax2.set_xticks((10,20,30,40,50))
 ax3.set_xticks((10,20,30,40,50))
 ax4.set_xticks((10,20,30,40,50))
+
+
+dy = 0.02
+dx = 0.08
+limx = ax1.get_xlim()
+limy = ax1.get_ylim()
+ax1.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"a",fontsize=10,weight="bold")
+limx = ax2.get_xlim()
+limy = ax2.get_ylim()
+ax2.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"b",fontsize=10,weight="bold")
+limx = ax3.get_xlim()
+limy = ax3.get_ylim()
+ax3.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"c",fontsize=10,weight="bold")
+limx = ax4.get_xlim()
+limy = ax4.get_ylim()
+ax4.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"d",fontsize=10,weight="bold")
+
 
 plt.savefig("figures/line_results.pdf",transparent=True)
 

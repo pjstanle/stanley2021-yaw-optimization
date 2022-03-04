@@ -60,8 +60,8 @@ opt_discrete = np.zeros((ndirs,nrows))
 opt_continuous = np.zeros((ndirs,nrows))
 
 for k in range(ndirs):
-    rows,percent_increase,start_aep,opt_aep,time,funcs = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/grid_layout/discrete/discrete_%sdir_20yaw.txt"%dirs[k],TURBS=False)
-    rows,percent_increase_c,start_aep_c,opt_aep_c,time_c,funcs_c = read_layout_file("/Users/astanley/Projects/active_projects/stanley2021-yaw-optimization/grid_layout/continuous/continuous_%sdir.txt"%dirs[k],TURBS=False)
+    rows,percent_increase,start_aep,opt_aep,time,funcs = read_layout_file("../grid_layout/discrete/discrete_%sdir_20yaw.txt"%dirs[k],TURBS=False)
+    rows,percent_increase_c,start_aep_c,opt_aep_c,time_c,funcs_c = read_layout_file("../grid_layout/continuous/continuous_%sdir.txt"%dirs[k],TURBS=False)
     
     percent_discrete[k,:] = percent_increase[:]
     percent_continuous[k,:] = percent_increase_c[:]
@@ -172,10 +172,30 @@ ax6.set_xlabel("number of grid rows",fontsize=8)
 
 
 
-plt.suptitle("varied wind direction for a grid of turbines: percent improvement",fontsize=8)
+plt.suptitle("Varied wind direction for a grid of turbines: percent improvement",fontsize=8)
 plt.subplots_adjust(top=0.89,left=0.14,right=0.99,bottom=0.15,
             wspace=0.3,hspace=0.4)
 
+dy = 0.02
+dx = 0.08
+limx = ax1.get_xlim()
+limy = ax1.get_ylim()
+ax1.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"a",fontsize=10,weight="bold")
+limx = ax2.get_xlim()
+limy = ax2.get_ylim()
+ax2.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"b",fontsize=10,weight="bold")
+limx = ax3.get_xlim()
+limy = ax3.get_ylim()
+ax3.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"c",fontsize=10,weight="bold")
+limx = ax4.get_xlim()
+limy = ax4.get_ylim()
+ax4.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"d",fontsize=10,weight="bold")
+limx = ax5.get_xlim()
+limy = ax5.get_ylim()
+ax5.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"e",fontsize=10,weight="bold")
+limx = ax6.get_xlim()
+limy = ax6.get_ylim()
+ax6.text(limx[0]+dx*(limx[1]-limx[0]),limy[1]-dy*(limy[1]-limy[0]),"f",fontsize=10,weight="bold")
 
 plt.savefig("figures/grid_percent.pdf",transparent=True)
 
